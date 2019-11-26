@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 18 - Simple Data - JavaScript Explained</title>
+    <title>Exercise 18 - Reusable Code - JavaScript Explained</title>
   </head>
   <body>
-    <h1>Simple Data Exercises</h1>
+    <h1>Reusable Code Exercises</h1>
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
     // Place your code below this line, before the closing script tag
-    const comment='notallowe sjhaiunckjabjk cnkj.bkakjnkls.jlkamx .,mnklakna';
-    console.log(comment);
+    function getLinkMarkup(title,url){
+      return '<a href='+URL+'>'+TITLE+'</a>';
+    }
+    console.log(getLinkMarkup('men','https://www.google.co.uk'));
   </script>
 </html>

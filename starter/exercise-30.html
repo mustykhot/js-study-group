@@ -4,17 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 27 - Simple Data - JavaScript Explained</title>
+    <title>Exercise 27 - Reusable Code - JavaScript Explained</title>
   </head>
   <body>
-    <h1>Simple Data Exercises</h1>
+    <h1>Reusable Code Exercises</h1>
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
-    let price = 100;
-    let quantity = 2;
-    const tax = 0.2;
-    let total = (price + price * tax) * quantity;
-    console.log(total.toFixed(2));
+    const getArticleMarkup=(title, url, excerpt, author)=> {
+      let markup = getHeaderLinkMarkup(title, url);
+      markup += getExcerptMarkup(excerpt);
+      markup += getAuthorMarkup(author);
+      return markup;
+    }
+    console.log(
+      getArticleMarkup(
+        `JavaScript Explained`,
+        `https://javascriptexplained.com`,
+        `A practical guide to getting up and running with JavaScript quickly and easily.`,
+        `Zac Gordon`
+      )
+    );
+    const getExcerptMarkup=(excerpt)=> {
+      return `<div class="excerpt"><p>${excerpt}</p></div>`;
+    }
+    const getAuthorMarkup=(author)=> {
+      return `<p>By: ${author}</p>`;
+    }
+    const getHeaderLinkMarkup=(title, url)=> {
+      const link = getMyLinkMarkup(title, url);
+      const header = getMyHeaderMarkup(link);
+      return header;
+    }
+    const getMyLinkMarkup=(title, url)=> {
+      return `<a href="${url}">${title}</a>`;
+    }
+    const getMyHeaderMarkup=(title)=> {
+      return `<h1>${title}</h1>`;
+    }
   </script>
 </html>
