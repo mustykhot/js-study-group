@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 6 - Reusable Code - JavaScript Explained</title>
+    <title>Exercise 6 - Complex Data - JavaScript Explained</title>
   </head>
   <body>
-    <h1>Reusable Code Exercises</h1>
+    <h1>Complex Data Exercises</h1>
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
-    function getUsername() {
-      return `myusername`;
+    function getUserInfo() {
+      let user = {
+        username: ``,
+        password: ``
+      };
+      user.username = prompt(`Please enter your username`);
+      user.password = prompt(`Please enter your password`);
+      return user;
     }
-    let userName=getUsername();
-    console.log(userName)
+    console.log(getUserInfo());
   </script>
 </html>

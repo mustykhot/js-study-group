@@ -4,26 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 12 - Reusable Code - JavaScript Explained</title>
+    <title>Exercise 12 - Complex Data - JavaScript Explained</title>
   </head>
   <body>
-    <h1>Reusable Code Exercises</h1>
+    <h1>Complex Data Exercises</h1>
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
-    // Place your code below this line, before the closing script tag
-    function getLogin(){
-      let password=prompt('enter password')
-      if (password='password'){
-        alert('True Thank you! You are logged in')
-        return true;
-        
-      }
-      else{
-        alert('False incorrect,please try again!')
-        return false;
-      }
+    const message = {
+      notice: `This is a notice.`,
+      error: `An error occured!`,
+      success: `Success!`
+    };
+    function getMessage(type) {
+      return message[type];
     }
-    console.log(getLogin());
+    console.log(getMessage(`notice`));
   </script>
 </html>

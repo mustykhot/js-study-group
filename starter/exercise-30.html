@@ -4,43 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 27 - Reusable Code - JavaScript Explained</title>
+    <title>Exercise 27 - Complex Data - JavaScript Explained</title>
   </head>
   <body>
-    <h1>Reusable Code Exercises</h1>
+    <h1>Complex Data Exercises</h1>
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
-    const getArticleMarkup=(title, url, excerpt, author)=> {
-      let markup = getHeaderLinkMarkup(title, url);
-      markup += getExcerptMarkup(excerpt);
-      markup += getAuthorMarkup(author);
-      return markup;
-    }
-    console.log(
-      getArticleMarkup(
-        `JavaScript Explained`,
-        `https://javascriptexplained.com`,
-        `A practical guide to getting up and running with JavaScript quickly and easily.`,
-        `Zac Gordon`
-      )
-    );
-    const getExcerptMarkup=(excerpt)=> {
-      return `<div class="excerpt"><p>${excerpt}</p></div>`;
-    }
-    const getAuthorMarkup=(author)=> {
-      return `<p>By: ${author}</p>`;
-    }
-    const getHeaderLinkMarkup=(title, url)=> {
-      const link = getMyLinkMarkup(title, url);
-      const header = getMyHeaderMarkup(link);
-      return header;
-    }
-    const getMyLinkMarkup=(title, url)=> {
-      return `<a href="${url}">${title}</a>`;
-    }
-    const getMyHeaderMarkup=(title)=> {
-      return `<h1>${title}</h1>`;
-    }
+    const dataset = [
+      { id: 1820, value: 491800 },
+      { id: 4310, value: 430110 },
+      { id: 3980, value: 657010 },
+      { id: 5573, value: 801430 },
+      { id: 2010, value: 313001 }
+    ];
+    const values = dataset.map(data => data.value);
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    const sum = values.reduce((a, b) => (b += a));
+    const average = sum / values.length;
+    const total = sum.toFixed(2);
+    console.log(min, max, average, total);
   </script>
 </html>

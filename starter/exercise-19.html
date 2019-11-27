@@ -4,25 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 19 - Reusable Code - JavaScript Explained</title>
+    <title>Exercise 19 - Complex Data - JavaScript Explained</title>
   </head>
   <body>
-    <h1>Reusable Code Exercises</h1>
+    <h1>Complex Data Exercises</h1>
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
-    function getMyHeaderLinkMarkup(title, url){
-      let link=getMyLinkMarkup(title,URL)
-      let header=getMyHeaderMarkup(title)
-      return header;
-      
+    const posts = [
+      {
+        id: 1,
+        title: `First Post`,
+        slug: `first-post`,
+        excerpt: `Let's get this started!`
+      },
+      {
+        id: 2,
+        title: `Second Post`,
+        slug: `second-post`,
+        excerpt: `On a roll..`
+      },
+      {
+        id: 1,
+        title: `Third Post`,
+        slug: `third-post`,
+        excerpt: `Keeping it going.`
+      }
+    ];
+    function getTitlesMarkup(posts) {
+      let markup = `<ul>`;
+      posts.map(post => {
+        markup += `<li><h2><a href="/${post.slug}">${post.title}</a></li>`;
+      });
+      markup += `</ul>`;
+      return markup;
     }
-    console.log(getMyHeaderLinkMarkup('geg','https://www.ask.com'));
-    function getMyLinkMarkup(title, url) {
-      return `<a href="${url}">${title}</a>`;
-    }
-    function getMyHeaderMarkup(title) {
-      return `<h1>${title}</h1>`;
-    }
+    console.log(getTitlesMarkup(posts));
   </script>
 </html>
