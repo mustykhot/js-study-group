@@ -15,6 +15,14 @@
       {
         id: 1,
         title: `Welcome to JS`,
+        cats: [ `intro`],
+        url: `welcome-to-js`,
+        excerpt: `An introduction`
+
+      },
+      {
+        id: 1,
+        title: `Welcome to JS`,
         cats: [`js`, `intro`],
         url: `welcome-to-js`,
         excerpt: `An introduction`
@@ -32,13 +40,6 @@
         cats: [`js`, `practice`],
         url: `more-js-practice`,
         excerpt: `Practice, practice, practice`
-      },
-      {
-        id: 5,
-        title: `Hosting JS Projects`,
-        cats: [`hosting`],
-        url: `hosting-js-practice`,
-        excerpt: `Some helpful information to know`
       }
     ];
     const jsArticles = posts.filter(post => post.cats.includes(`js`));
@@ -54,6 +55,7 @@
       markup += `</div>`;
       return markup;
     }
-    console.log(getPostMarkup(nonJSArticles));
+    console.log(getPostMarkup(nonJSArticles))
+    // Place your code below this line, before the closing script tag
   </script>
 </html>

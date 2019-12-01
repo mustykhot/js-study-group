@@ -15,14 +15,15 @@
       id: 1,
       username: `yourusername`,
       loggedIn: true,
-      sayHi: function() {
-        if (user.loggedIn == true) {
-          console.log(`Hi ${user.username}!`);
-        } else {
-          console.log(`Please login!`);
-        }
+      sayHi:  function() {
+      if (user.loggedIn == true) {
+        console.log(`Hi ${user.username}!`);
+      } else {
+        console.log(`Please login!`);
       }
+    }
     };
-    user.sayHi();
+  
+    sayHi(user);
   </script>
 </html>

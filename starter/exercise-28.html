@@ -20,10 +20,15 @@
         excerpt: `An introduction`
       },
       {
+        id: 2,
+        title: `Using a Code Editor`,
+        cats: [`tools`, `intro`],
+        excerpt: `A tutorial on the basics`
+      },
+      {
         id: 3,
         title: `JavaScript Arrays`,
         cats: [`js`],
-        url: `using-a-code-editor`,
         excerpt: `A tutorial on the basics`
       },
       {
@@ -47,6 +52,7 @@
       markup += `</div>`;
       return markup;
     }
+    console.log(getPostMarkup(nonJSArticles))
     console.log(getPostMarkup(nonJSArticles));
   </script>
 </html>

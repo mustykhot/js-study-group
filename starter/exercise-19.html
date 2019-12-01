@@ -31,7 +31,7 @@
         excerpt: `Keeping it going.`
       }
     ];
-    function getTitlesMarkup(posts) {
+    function getTitlesMarkup(posts){
       let markup = `<ul>`;
       posts.map(post => {
         markup += `<li><h2><a href="/${post.slug}">${post.title}</a></li>`;
@@ -39,6 +39,8 @@
       markup += `</ul>`;
       return markup;
     }
-    console.log(getTitlesMarkup(posts));
+    console.log(getTitlesMarkup(posts))
+
+    // Place your code below this line, before the closing script tag
   </script>
 </html>

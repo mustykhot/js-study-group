@@ -12,6 +12,14 @@
   </body>
   <script>
     const posts = [
+    {
+        id: 1,
+        title: `Welcome to JS`,
+        cats: [`js`, `intro`],
+        url: `welcome-to-js`,
+        excerpt: `An introduction`
+      },
+      
       {
         id: 1,
         title: `Welcome to JS`,
@@ -32,13 +40,6 @@
         cats: [`js`],
         url: `using-a-code-editor`,
         excerpt: `A tutorial on the basics`
-      },
-      {
-        id: 4,
-        title: `More JS Practice`,
-        cats: [`js`, `practice`],
-        url: `more-js-practice`,
-        excerpt: `Practice, practice, practice`
       }
     ];
     const jsArticles = posts.filter(post => post.cats.includes(`js`));
@@ -54,6 +55,6 @@
       markup += `</div>`;
       return markup;
     }
-    console.log(getPostMarkup(jsArticles));
+    console.log(getPostMarkup(jsArticles))
   </script>
 </html>

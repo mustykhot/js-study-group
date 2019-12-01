@@ -11,17 +11,17 @@
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
-    function getMessageMarkup(type) {
+    
+    function getMessageMarkup( type ){
       const message = {
-        notice: `This is a notice.`,
-        error: `An error occured!`,
-        success: `Success!`
-      };
-      let markup = `<div class="message ${type}">`;
-      markup += message[type];
-      markup += `</div>`;
-      return markup;
+      notice: `This is a notice.`,
+      error: `An error occured!`,
+      success: `Success!`
+    };
+    return `<div class='message ${type}'>${message[type]}</div>`
+    
     }
-    console.log(getMessageMarkup(`error`));
+    console.log(getMessageMarkup('error'));
+    // Place your code below this line, before the closing script tag
   </script>
 </html>

@@ -11,13 +11,12 @@
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
-    function getUserInfo() {
-      let user = {
-        username: ``,
-        password: ``
+    // Place your code below this line, before the closing script tag
+    function getUserInfo(){
+      const user={
+        username: prompt('enter username'),
+        password: prompt('enter password'),
       };
-      user.username = prompt(`Please enter your username`);
-      user.password = prompt(`Please enter your password`);
       return user;
     }
     console.log(getUserInfo());
